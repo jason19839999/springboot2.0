@@ -18,7 +18,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @EnableHelloWorld
 @SpringBootApplication
-@ComponentScan(basePackages = "com.imooc.diveinspringboot.controller")
+@ComponentScan(basePackages = "com.imooc.diveinspringboot")
 public class EnableHelloWorldBootstrap {
 
     public static void main(String[] args) {
