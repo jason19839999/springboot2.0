@@ -1,0 +1,4 @@
+# 自动装配
+#\  表示换行
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.imooc.diveinspringboot.configuration.HelloWorldAutoConfiguration
