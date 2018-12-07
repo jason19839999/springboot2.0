@@ -26,7 +26,7 @@ public class ThymeleafTemplateEngineBootstrap {
         // 创建渲染上下文
         Context context = new Context();
         context.setVariable("message", "Hello,World");
-
+        context.setVariable("first", "第一行");
         // 读取内容从 classpath:/templates/thymeleaf/hello-world.html
         // ResourceLoader
         ResourceLoader resourceLoader = new DefaultResourceLoader();

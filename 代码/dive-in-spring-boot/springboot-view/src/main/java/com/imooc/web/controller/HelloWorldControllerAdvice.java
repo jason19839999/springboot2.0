@@ -27,6 +27,11 @@ public class HelloWorldControllerAdvice {
         return "Hello,World";
     }
 
+    @ModelAttribute("first")
+    public String first(){
+        return "我在第一行了";
+    }
+
     @ExceptionHandler(Throwable.class)
     public ResponseEntity<String> onException(Throwable throwable) {
         return ResponseEntity.ok(throwable.getMessage());
