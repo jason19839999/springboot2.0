@@ -15,7 +15,7 @@ import org.springframework.core.annotation.Order;
 public class HelloWorldApplicationListener implements ApplicationListener<ContextRefreshedEvent> {
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        System.out.println("HelloWorld : " + event.getApplicationContext().getId()
+        System.out.println("HelloWorld   ContextRefreshedEvent: " + event.getApplicationContext().getId()
                 + " , timestamp : " + event.getTimestamp());
     }
 }

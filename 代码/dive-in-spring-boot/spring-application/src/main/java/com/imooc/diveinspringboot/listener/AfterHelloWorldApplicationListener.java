@@ -13,7 +13,7 @@ import org.springframework.core.Ordered;
 public class AfterHelloWorldApplicationListener implements ApplicationListener<ContextRefreshedEvent>,Ordered {
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        System.out.println("AfterHelloWorld : " + event.getApplicationContext().getId()
+        System.out.println("AfterHelloWorld  ContextRefreshedEvent: " + event.getApplicationContext().getId()
                 + " , timestamp : " + event.getTimestamp());
     }
 
