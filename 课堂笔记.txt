@@ -1,3 +1,6 @@
 1.Build → Build Module 'springboot-view'  修改页面的元素，不用重启服务新改的元素就可以显示到页面上来  
+2.ctrl + shift + N 查找类和接口
+3.ctrl + F12 查找类或者接口方法
+4.课纲上的知识点对应资料地址：https://github.com/mercyblitz/jsr
 
 
