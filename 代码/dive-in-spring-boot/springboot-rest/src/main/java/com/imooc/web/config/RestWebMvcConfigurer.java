@@ -27,6 +27,7 @@ public class RestWebMvcConfigurer implements WebMvcConfigurer {
     @Autowired
     private RequestMappingHandlerAdapter requestMappingHandlerAdapter;
 
+    //自定义resolver 和 handler实现
     @PostConstruct
     public void init() {
         // 获取当前 RequestMappingHandlerAdapter 所有的 Resolver 对象
@@ -50,7 +51,7 @@ public class RestWebMvcConfigurer implements WebMvcConfigurer {
         requestMappingHandlerAdapter.setReturnValueHandlers(newHandlers);
     }
 
-
+    //跨域实现
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**").allowedOrigins("*");
     }
@@ -67,9 +68,15 @@ public class RestWebMvcConfigurer implements WebMvcConfigurer {
 
     }
 
+
+    //*********注意这里是当没有添加PropertiesHandlerMethodArgumentResolver这个自定义resovler时需要在这里绑定,
+    // 此时需要把Controller方法请求参数 @RequestBody加上*************
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
         // 不建议添加到 converters 的末尾
-//        converters.add(new PropertiesHttpMessageConverter());
-//        converters.set(0, new PropertiesHttpMessageConverter()); // 添加到集合首位
+//        if(converters.isEmpty()){
+//            converters.add(new PropertiesHttpMessageConverter());
+//        }else{
+//            converters.set(0, new PropertiesHttpMessageConverter()); // 添加到集合首位
+//        }
     }
 }

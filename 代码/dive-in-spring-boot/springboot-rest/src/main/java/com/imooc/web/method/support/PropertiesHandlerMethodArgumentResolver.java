@@ -25,6 +25,9 @@ public class PropertiesHandlerMethodArgumentResolver implements HandlerMethodArg
         return Properties.class.equals(parameter.getParameterType());
     }
 
+
+    // 此时需要把Controller方法请求参数 @RequestBody去掉，那个么请求参数就会被解析出来了，
+    // 这里当然也可以设置其他参数，比如通过datacenter/crudreposity/access/UserArgumentResolver.java设置*************
     @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
                                   NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
